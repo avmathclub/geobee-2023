@@ -1,0 +1,38 @@
+problem: |-
+  $O$ is the center of the circle, and $\angle CAD=50^\circ$. Find the angle measure of $\angle DBE$.
+  \begin{center}
+    \begin{asy}
+      size(5cm);
+      dot((0,0));
+      draw(circle((0,0),1)); 
+      label((0,-0.05),"$O$",SSW);
+      label((0,1),"$A$",N);
+      label((cos(pi/6),sin(pi/6)),"$E$",NE);
+      label((-cos(pi/6),-sin(pi/6)),"$C$",SW);
+      label((cos(5*pi/18),-sin(5*pi/18)),"$D$",E);
+      label((-cos(5*pi/18),sin(5*pi/18)),"$B$",NW);
+      draw((cos(pi/6),sin(pi/6))--(-cos(pi/6),-sin(pi/6))--(0,1)--(cos(5*pi/18),-sin(5*pi/18))--(-cos(5*pi/18),sin(5*pi/18))--cycle);
+    \end{asy}
+  \end{center}
+author: Julian Xiao
+answer: 40^{\circ}
+solutions:
+  - text: |-
+      Using the Inscribed Angle Theorem, the minor arc $\widehat{CD}$ has angle measure $2\angle CAD = 100^\circ$. Because $CE$ is a diameter, $\widehat{CD}+\widehat{DE}=180^\circ$, which means $\widehat{DE}=80^\circ$. Applying Inscribed Angle Theorem again gives us $\angle DBE=\frac12\widehat{DE}=\boxed{40^\circ}$.
+      \begin{center}
+          \begin{asy}
+          size(4cm);
+          draw(circle((0,0),1)); 
+          dot((0,0));
+          label((0,-0.05),"$O$",SSW);
+          label((0,1),"$A$",N);
+          label((cos(pi/6),sin(pi/6)),"$E$",NE);
+          label((-cos(pi/6),-sin(pi/6)),"$C$",SW);
+          label((cos(5*pi/18),-sin(5*pi/18)),"$D$",E);
+          label((-cos(5*pi/18),sin(5*pi/18)),"$B$",NW);
+          draw((cos(pi/6),sin(pi/6))--(-cos(pi/6),-sin(pi/6))--(0,1)--(cos(5*pi/18),-sin(5*pi/18))--(-cos(5*pi/18),sin(5*pi/18))--cycle);
+          label((0,-1),"$100^\circ$",N);
+          label((0.9,0),"$80^\circ$",SSW);
+          \end{asy}
+      \end{center}
+    author: Julian Xiao

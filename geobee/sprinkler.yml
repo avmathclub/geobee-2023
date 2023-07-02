@@ -1,0 +1,26 @@
+problem: Farmer Eggbert has a rectangular field $ABCD$ such that $\overline{AB} = 12$ and $\overline{AD} = 6\sqrt{3}$. He has a sprinkler installed at point $A$, which has a watering radius of $12$ (any part of the field within a distance of $12$ from $A$ will be watered). What is the area of Eggbert's field which is not within the watering range of the sprinkler?
+author: Kaden Nguyen
+answer: 54\sqrt3-24\pi
+solutions:
+  - text: |-
+      We can first calculate the area of the rectangular field that is within the watering range. We can draw a circle centered at $A$ with a radius of $12$ to represent the part of the field that is within the watering range. Let point $E$ be the point where this circle intersects $\overline{CD}$ between $C$ and $D$. The area that gets watered is equal to the area of $\triangle ADE$ plus the area of sector $ABE$. Since $\overline{AE} = 12$, Pythagorean Theorem gives $\overline {DE} = 6$. $\triangle ADE$ must also be a 30-60-90 triangle, with $\angle DAE = 30^{\circ}$. $\angle EAB$ then equals $60^{\circ}$. We can calculate the areas to be:$$[\triangle ADE] = \frac{6 \times 6\sqrt{3}}{2} = 18\sqrt{3}$$The sector $EAB$ has area:$$12 \times 12 \times \pi \times \frac{60^{\circ}}{360^{\circ}} = 24\pi$$The area of the field that is not within the watering range is the area of the whole field minus the two areas calculated above: $$12 \times 6\sqrt{3} - 18\sqrt{3} - 24\pi = \boxed{54\sqrt{3} - 24\pi}$$
+      \begin{center}
+          \begin{asy}
+              size(4.5cm);
+              draw((0,0)--(12,0)--(12,6*sqrt(3))--(0,6*sqrt(3))--cycle);
+              label((0,6*sqrt(3)),"$A$",NW);
+              label((12,6*sqrt(3)),"$B$",NE);
+              label((12,0),"$C$",SE);
+              label((0,0),"$D$",SW);
+              label((6,0),"$E$",S);
+              label((0,3*sqrt(3)),"$6\sqrt3$",W);
+              label((6,6*sqrt(3)),"$12$",N);
+              label((3,3*sqrt(3)),"$12$",SSW);
+              label((3,0),"$6$",S);
+              label((9,0),"$6$",S);
+              label((0.5,6*sqrt(3)-0.5),"$60^\circ$",ESE);
+              filldraw((6,0)--(12,0)--(12,6*sqrt(3))--(6,6*sqrt(3))--cycle,lightgray);
+              filldraw((12,6*sqrt(3))--(0,6*sqrt(3))--(6,0)--arc((0,6*sqrt(3)),(6,0),((12,6*sqrt(3))))--cycle,white);
+          \end{asy}
+      \end{center}
+    author: Kaden Nguyen 

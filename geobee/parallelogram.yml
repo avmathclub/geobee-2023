@@ -1,0 +1,21 @@
+problem: Parallelogram $ABCD$ has side lengths $AB=2$ and $AD=4$. $M$ is the midpoint of $\overline{BC}$, and $AM=3$. Find $DM$.
+author: Julian Xiao
+answer: \sqrt{7}
+solutions:
+  - text: |-
+      The key to solving this problem is noticing that $\angle AMD=90^\circ$. There are many possible methods to arrive at this conclusion (the simplest way is to infer this fact by drawing to-scale diagrams). One method is angle chasing: $\angle B+\angle C = 180^\circ$ because of same-side interior angles, and $\triangle ABM$ and $\triangle MCD$ are isosceles triangles. Use these facts to show that $\angle AMD=90^\circ$. Apply Pythagorean Theorem on $\triangle AMD$: $AM^2+DM^2=AD^2\Longrightarrow 3^2+DM^2=4^2\Longrightarrow DM=\boxed{\sqrt7}$.
+      \begin{center}
+          \begin{asy}
+              size(10cm);
+              draw((0,0)--(4,0)--(4.25,sqrt(63/16))--(0.25,sqrt(63/16))--cycle);
+              draw((0,0)--(2.25,sqrt(63/16))--(4,0));
+              label((0,0),"$A$",SW); label((0.25,sqrt(63/16)),"$B$",NW); label((4.25,sqrt(63/16)),"$C$",NE); label((4,0),"$D$",SE); label((2.25,sqrt(63/16)),"$M$",N); 
+              label((0.25,sqrt(63/16)),"$x^\circ$",SE); 
+              label((4.25,sqrt(63/16)),"$(180-x)^\circ$",SW);
+              label((0.3,0.6),"$(90-\frac{x}2)^\circ$",NNE);
+              label((2.1,sqrt(63/16)-0.1),"$(90-\frac{x}2)^\circ$",WSW);
+              label((2.4,sqrt(63/16)-0.1),"$(\frac{x}2)^\circ$",ESE);
+              label((4.1,0.3),"$(\frac{x}2)^\circ$",NW);
+          \end{asy}
+      \end{center}
+    author: Julian Xiao 

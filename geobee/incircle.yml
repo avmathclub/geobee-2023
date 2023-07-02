@@ -1,0 +1,28 @@
+problem: Triangle $ABC$ has $AB = 3, BC =5, CA = 4$. There exists $D$ on side $BC$ such that the incircles of triangles $ABD$ and $ACD$ are tangent. Find $AD$.
+author: Ethan Han
+answer: \frac{\sqrt{145}}{5} \text{ or } \sqrt{\frac{29}{5}}
+solutions:
+  - text: |-
+      Suppose we have a triangle $ABC$ with $AB = a, BC = c, CA = b$.  Let the incircle meet sides $BC, CA, AB$ at $D, E, F$ respectively.  Then $AE = AF = x$, since they are tangents to the incircle from $A$.  Similarly, let $BD = BF = y, CD = CE = z$.
+      
+      We have that $x + y = c, y + z = a, x + z = b$.  Adding the equations together gives $2(x + y + z) = a + b + c$, so $x + y + z = \frac{a+b+c}{2}$.
+      
+      Then we find that $x = (x + y + z) - (y + z) = \frac{a+b+c}{2} - a$.  Similarly, $y = \frac{a+b+c}{2} - b, z = \frac{a+b+c}{2} - c$.
+      
+      Now apply this fact to the actual problem.  Let the incircles intersect at $E$ on $AD$.  Looking at triangle $ABD$, we have:
+      \begin{align*}
+      DE = \frac{AD + BD + AB}{2} - AB = \frac{AD + BD + 3}{2} - 3.
+      \end{align*}
+      
+      Looking at triangle $ACD$, we have: 
+      
+      \begin{align*}
+      DE = \frac{AD + CD + AC}{2} - AC = \frac{AD + (5 - BD) + 4}{2} - 4.  
+      \end{align*}
+      Then: \begin{align*}\frac{AD + BD + 3}{2} - 3 = \frac{AD + (5 - BD) + 4}{2} - 4  \end{align*}
+      
+      Multiplying both sides by $2$ gives $AD + BD + 3 - 6 = AD + (5 - BD) + 4 - 8$.  After cancelling out $AD$ from both sides, we can solve the resulting linear equation for $BD$, which gives $BD = 2$.
+      
+      Now $\cos{B} = \frac{3}{5}$, since $\angle A = 90$.  Using law of cosines in $\triangle ABD$ gives \begin{align*}AD^2 = 2^2 + 3^2 - 2 \cdot 2 \cdot 3 \cdot \frac{3}{5} = 13 - \frac{36}{5} = \frac{29}{5}
+      \end{align*}  Then $AD = \sqrt{\frac{29}{5}} = \frac{\sqrt{145}}{5}$.
+    author: Ethan Han

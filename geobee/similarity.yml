@@ -1,0 +1,38 @@
+problem: Let $ABC$ be a right triangle where $\angle B=90^\circ$. Point $D$ lies on $\overline{BC}$ and point $E$ lies on $\overline{AC}$. Given that $AB=4$, $BD=4$, $AE=5\sqrt2$, and $\angle ADE=90^\circ$, find $CD$. 
+answer: 24
+author: Julian Xiao
+solutions:
+  - text: |-
+      By the Pythagorean Theorem, $AD = 4\sqrt2$.  Then triangle $ADE$ is a $3-4-5$ right triangle, so $DE = 3\sqrt2$.
+      
+      Take $F$ on $BC$ with $EF$ perpendicular to $BC$.  Since 
+      \begin{center}
+          \begin{asy}
+              size(10cm);
+              draw((0,0)--(28,0)--(0,4)--cycle);
+              draw((4,0)--(0,4));
+              draw((4,0)--(7,3));
+              draw((7,3)--(7,0),dashed);
+              label((0,0),"$B$",SW);
+              label((0,4),"$A$",NW);
+              label((28,0),"$C$",SE);
+              label((4,0),"$D$",S);
+              label((7,3),"$E$",NNE);
+              label((0,2),"$4$",W);
+              label((7,1.5),"$3$",E);
+              label((2,0),"$4$",S);
+              label((5.5,0),"$3$",S);
+              label((17.5,0),"$21$",S);
+          \end{asy}
+      \end{center}
+      
+      $ABD$ is an isosceles right triangle, $\angle ADB = 45 \Rightarrow \angle EDB = 45 + 90 = 135 \Rightarrow \angle EDF = 45$.
+      
+      Then $DEF$ is also an isosceles right triangle.  Because $DE = 3\sqrt2$, we have $DF = EF = 3$.  Then $BF = 4 + 3 = 7$.
+      
+      Since triangles $CEF, CAB$ are similar, we have $\frac{CF}{EF} = \frac{CB}{AB}$.  This means that:
+      \begin{align*}
+          \frac{CF}{3} = \frac{CF + 7}{4}
+      \end{align*}
+      Solving the resulting linear equation gives $CF = 21$, so $CD = 21 + 3 = 24$.
+    author: Ethan Han

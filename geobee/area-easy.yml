@@ -1,0 +1,6 @@
+problem: A quadrilateral has two right angles and sides of length $20$, $20$, $23$, and $23$. What is the area of this quadrilateral?
+author: Julian Xiao
+answer: 460
+solutions:
+  - text: If the sides with length $20$ are adjacent, we have a kite.  Otherwise, we have a rectangle.  Either way, by splitting the quadrilateral along the diagonal, it is comprised of two right triangles with leg lengths $20, 23$.  Then the area is $2\cdot \left(\frac{20\cdot23}2\right)=20\cdot23=460$.
+    author: Ethan Han

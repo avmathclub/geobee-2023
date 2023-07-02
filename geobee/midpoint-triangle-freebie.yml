@@ -1,0 +1,24 @@
+problem: Let $\triangle ABC$ be an equilateral triangle with area $16$. Let the midpoint of $\overline{AB}$ be $D$, the midpoint of $\overline{BC}$ be $E$, and the midpoint of $\overline{CA}$ be $F$. What is the area of $\triangle DEF$?
+answer: 4
+author: Kaden Nguyen
+solutions:
+  - text: |-
+      $\overline{AF}$ and $\overline{AD}$ have the same length, half of the length of the equilateral triangle. Therefore, $\angle AFD = \angle ADF$. $\angle DAF = 60^{\circ}$, so $\angle AFD = \angle ADF = 60^{\circ}$. By this same reasoning, we can see that $\triangle ADF$, $\triangle CEF$, $\triangle EBD$, and $\triangle DEF$ are all equilateral triangles. We also see that these four triangles all have the same measure of side length. Thus, $\triangle ADF$, $\triangle CEF$, $\triangle EBD$, and $\triangle DEF$ are congruent and have the same area. If the sum of the areas of the four triangles is 16, then the area of $\triangle DEF$ is \boxed{4}.
+      \begin{center}
+      \begin{asy}
+          size(3cm);
+          draw((0,0)--(1,0)--(0.5,sqrt(3)/2)--cycle);
+          draw((0.5,0)--(0.25,sqrt(3)/4)--(0.75,sqrt(3)/4)--cycle);
+          label((0.5,sqrt(3)/2),"$A$",N);
+          label((0,0),"$B$",SW);
+          label((1,0),"$C$",SE);
+          label((0.25,sqrt(3)/4),"$D$",WNW);
+          label((0.75,sqrt(3)/4),"$F$",ENE);
+          label((0.5,0),"$E$",S);
+          label((0.5,sqrt(3)/6),"4");
+          label((0.5,sqrt(3)/3),"4");
+          label((0.25,sqrt(3)/12),"4");
+          label((0.75,sqrt(3)/12),"4");
+      \end{asy}
+      \end{center}
+    author: Kaden Nguyen 

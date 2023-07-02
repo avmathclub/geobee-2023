@@ -1,0 +1,34 @@
+problem: A rectangular prism has two faces with area $60$, two faces with area $70$, and two faces with area $42$. Find the volume of the rectangular prism.
+answer: 420
+author: Julian Xiao
+solutions:
+  - text: |-
+      Suppose we label the edge lengths of our rectangular prism as such:
+      \begin{center}
+      \begin{asy}
+          size(3.5cm);
+          draw((0,0)--(0,7)--(10,7)--(10,0)--cycle);
+          draw((0,7)--(2,9)--(12,9)--(12,2)--(10,0));
+          draw((10,7)--(12,9));
+          label((5,0),"$x$",S);
+          label((10,3.5),"$y$",W);
+          label((11,1),"$z$",SE);
+          label((5,3.5),"70");
+          label((6,8),"60");
+          label((11,4.5),"42");
+          draw((0,0)--(2,2)--(2,9),dashed);
+          draw((2,2)--(12,2),dashed);
+      \end{asy}
+      \end{center}
+      We can then write three equations for the areas of the faces: $xy=70$, $xz=60$, $yz=42$. A student may use intuition to deduce that the values of $x$, $y$, and $z$ are 10, 7, and 6, respectively, and get a volume of 420. A student may also choose to multiply the three equations together and calculate the volume like so:
+      \begin{align*}
+          xy &= 70\\
+          xz &= 60\\
+          yz &= 42\\
+          x^2y^2z^2 &= 70\cdot60\cdot42\\
+          xyz &= \sqrt{70\cdot60\cdot42}\\
+          &=\sqrt{(2\cdot5\cdot7)\cdot(2^2\cdot3\cdot5)\cdot(2\cdot3\cdot7)}\\
+          &= 2^2\cdot3\cdot5\cdot7 = 420\\
+      \end{align*}
+      The volume of the prism is $\boxed{420}$.
+    author: Julian Xiao

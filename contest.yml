@@ -1,0 +1,14 @@
+template: geobee
+vars:
+  year: 2023
+problems:
+  - midpoint-triangle-freebie
+  - volume
+  - area-easy
+  - easyish-area-prob
+  - sprinkler
+  - angle-chasing-circle
+  - parallelogram
+  - similarity
+  - alg-bash
+  - incircle
